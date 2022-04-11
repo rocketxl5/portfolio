@@ -1,0 +1,253 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 60%;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  /* max-height: 100vh; */
+  font-family: 'Roboto', Arial, sans-serif;
+  /* background-color: #F8EFDE; */
+  background-color: #ede4d1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #3c3934;
+}
+
+/* Logo styling */
+div.logo {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1.text1 {
+  position: relative;
+  left: -250px;
+  width: 100%;
+  font-weight: 600;
+  font-size: 7rem;
+  letter-spacing: 1px;
+  color: #ede4d1;
+  animation-name: logo1;
+  animation-delay: 0.8s;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+/* Logo animation */
+@keyframes logo1 {
+  from {
+    left: -250px;
+  }
+  to {
+    left: 10px;
+  }
+}
+
+span.text2 {
+  position: absolute;
+  top: -50px;
+  right: -55px;
+  font-size: 2.5em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #ede4d1;
+  transform: rotate(90deg);
+  animation-name: logo2;
+  animation-delay: 0.8s;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logo2 {
+  from {
+    top: -50px;
+  }
+  to {
+    top: 27px;
+  }
+}
+/* End logo styling */
+
+/* Bottom logo */
+.bottom-logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #3c3934;
+  /* padding: 0 10px; */
+  width: 165px;
+  height: 115px;
+}
+
+h2.text3 {
+  position: relative;
+  right: -200px;
+  font-weight: 600;
+  font-size: 7rem;
+  letter-spacing: 1px;
+  color: #ede4d1;
+  animation-name: logo3;
+  animation-delay: 0.8s;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logo3 {
+  from {
+    right: -200px;
+  }
+  to {
+    right: -10px;
+  }
+}
+
+span.text4 {
+  position: relative;
+  left: -150px;
+  bottom: 0;
+  font-weight: 600;
+  font-size: 2.5rem;
+  letter-spacing: 0.5px;
+  color: #ede4d1;
+  animation-name: logo4;
+  animation-delay: 0.8s;
+  animation-duration: 0.3s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes logo4 {
+  from {
+    right: -150px;
+  }
+  to {
+    left: 14px;
+  }
+}
+
+/* End bottom logo */
+
+/* Navigation styling */
+nav {
+  width: 80px;
+}
+
+.burger-box {
+  position: relative;
+  height: 80px;
+  background-color: #e92439;
+  width: 100%;
+}
+/* mobile navigation */
+.burger {
+  position: relative;
+  top: 37.5px;
+  left: 30%;
+  width: 100%;
+}
+.burger-box:hover {
+  cursor: pointer;
+}
+
+.burger div {
+  position: absolute;
+  left: 0;
+  width: 40%;
+  height: 2px;
+  background-color: #ede4d1;
+  transition: all 0.3s ease;
+}
+
+#line1 {
+  top: -7px;
+}
+
+#line3 {
+  top: 7px;
+}
+
+.nav-links {
+  position: absolute;
+  top: 15vh;
+  left: 0px;
+  width: 100%;
+  height: 80vh;
+  transform: translateX(200%);
+  transition: transform 1s ease;
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+.nav-links li {
+  list-style: none;
+  font-size: 3rem;
+  width: 100%;
+  padding: 8vh 10px;
+  border-bottom: 1px solid #e92439;
+}
+
+a {
+  display: none;
+  width: 50%;
+  text-decoration: none;
+  color: #3c3934;
+  /* border-bottom: 1px solid #E92439; */
+}
+
+.animate #line1 {
+  /* transform: rotate(45deg) translate(5px, 12px);  arrow */
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+.animate #line2 {
+  opacity: 0;
+}
+.animate #line3 {
+  /* transform: rotate(-45deg) translate(5px, -12px); arrow */
+  transform: rotate(45deg) translate(-4px, -6px);
+}
+
+.sideblock {
+  position: absolute;
+  z-index: 10;
+}
+
+.sideblock.left {
+  display: none;
+  bottom: 0px;
+  left: 0px;
+  width: 50px;
+  height: 250px;
+  background-color: #c6b04a;
+  z-index: -1;
+}
+.sideblock.right {
+  display: none;
+  top: 15vh;
+  right: 0px;
+  width: 81px;
+  height: 40vh;
+  background-color: #e92439;
+}
+
+@media screen and (max-width: 375px) {
+}
